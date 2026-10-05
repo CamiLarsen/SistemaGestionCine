@@ -32,6 +32,8 @@ public class FrmPeliculas extends javax.swing.JFrame {
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
         lblGenero = new javax.swing.JLabel();
@@ -43,8 +45,6 @@ public class FrmPeliculas extends javax.swing.JFrame {
         txtClasificacion = new java.awt.TextField();
         txtDuracion = new java.awt.TextField();
         txtAño = new java.awt.TextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
         btnGuardar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
@@ -68,6 +68,22 @@ public class FrmPeliculas extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"1", "Toy Story 5", "Animación ", "102 min", "ATP", "2026"},
+                {"2", "Spider Man", "Acción", "145 min", "SP", "2026"},
+                {"3", "La Odisea", "Aventura", "173", "SP", "2026"},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Titulo", "Género", "Duración", "Clasificación", "Año"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("GESTIÓN DE PELICULAS");
@@ -85,22 +101,6 @@ public class FrmPeliculas extends javax.swing.JFrame {
         txtTiulo.addActionListener(this::txtTiuloActionPerformed);
 
         txtGenero.addActionListener(this::txtGeneroActionPerformed);
-
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"1", "Toy Story 5", "Animación ", "102 min", "ATP", "2026"},
-                {"2", "Spider Man", "Acción", "145 min", "SP", "2026"},
-                {"3", "La Odisea", "Aventura", "173", "SP", "2026"},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "ID", "Titulo", "Género", "Duración", "Clasificación", "Año"
-            }
-        ));
-        jScrollPane2.setViewportView(jTable2);
 
         btnGuardar.setText("GUARDAR");
 
@@ -147,11 +147,8 @@ public class FrmPeliculas extends javax.swing.JFrame {
                                     .addComponent(txtTiulo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(210, 210, 210)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel1)))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,9 +181,7 @@ public class FrmPeliculas extends javax.swing.JFrame {
                     .addComponent(btnLimpiar)
                     .addComponent(btnGuardar)
                     .addComponent(btnEditar))
-                .addGap(39, 39, 39)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(283, Short.MAX_VALUE))
+                .addContainerGap(477, Short.MAX_VALUE))
         );
 
         lblTitulo.getAccessibleContext().setAccessibleDescription("lblTitulo");
